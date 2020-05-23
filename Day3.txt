@@ -46,3 +46,6 @@ user_input  = int(user_input)             #line2
 
 print("The double is ", double_parameter(user_input))       #line3
 
+
+print("End of program")
+
