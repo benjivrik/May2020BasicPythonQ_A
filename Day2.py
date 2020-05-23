@@ -69,4 +69,3 @@ print(type(str(w))) #line12
 
 
 
-
