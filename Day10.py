@@ -6,7 +6,7 @@
 # 30 Days - Q&A Python Basic
 # Day 9 : 29-05-2020
 # Day 9 | IG : https://www.instagram.com/benjivrik/
-# Subject : Challenge III - Guess the number
+# Subject : Challenge IV - Generate password
 #----------------------------------------------------
 # what would be the output of this program ?
 

@@ -1,0 +1,57 @@
+# ---------------------------------------------------
+# Author    :  Benjamin Kataliko Viranga
+# Community :  Stunt Business
+# Community website : www.stuntbusiness.com
+#
+# 30 Days - Q&A Python Basic
+# Day 9 : 29-05-2020
+# Day 9 | IG : https://www.instagram.com/benjivrik/
+# Subject : Challenge IV - Generate password
+#----------------------------------------------------
+# what would be the output of this program ?
+
+
+import string
+import random
+
+
+stop = "no"
+
+while stop == "no":
+
+    print("Hey User, I can help you with a password")
+    #get inputs from the user
+    x = int(input("How many letters do you want ? "))
+    y = int(input("How many numbers do you want ? "))
+    z = int(input("How many symbols do you want ? "))
+
+    #start to generate the password
+    password = ""
+    while(x  > 0): #letter generator
+        letter = random.choice(string.ascii_letters)
+        password = password + letter
+        x =  x - 1
+
+    while(y > 0) : #numbers
+        number = random.randint(0,9)
+        password = password + str(number)
+        y = y - 1
+
+    while(z > 0) : #symbols
+        symbol   = random.choice(string.punctuation)
+        password = password + str(symbol)
+        z = z - 1
+
+    #shuffle the password
+    password =  ''.join(random.sample(password,len(password)))
+    print("Your final password is : ", password)
+
+    # ask the user if he wants to continue
+    stop = input("Do you wanna stop ? yes or no : ") 
+    if(stop != "yes"):
+        stop = "no"
+        attempt = 5 #reinitialize the attempt
+    else :
+        break #stop the loop
+
+print("End of program")
