@@ -4,7 +4,7 @@
 # Community website : www.stuntbusiness.com
 #
 # 30 Days - Q&A Python Basic
-# Day 10 : 30-05-2020
+# Day 10 : 31-05-2020
 # Day 10 | IG : https://www.instagram.com/benjivrik/
 # Subject : Challenge IV - Generate password
 #----------------------------------------------------
@@ -50,7 +50,6 @@ while stop == "no":
     stop = input("Do you wanna stop ? yes or no : ") 
     if(stop != "yes"):
         stop = "no"
-        attempt = 5 #reinitialize the attempt
     else :
         break #stop the loop
 

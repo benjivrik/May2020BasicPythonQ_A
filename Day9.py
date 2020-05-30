@@ -4,7 +4,7 @@
 # Community website : www.stuntbusiness.com
 #
 # 30 Days - Q&A Python Basic
-# Day 9 : 29-05-2020
+# Day 9 : 30-05-2020
 # Day 9 | IG : https://www.instagram.com/benjivrik/
 # Subject : Challenge III - Guess the number
 #----------------------------------------------------

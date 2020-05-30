@@ -4,7 +4,7 @@
 # Community website : www.stuntbusiness.com
 #
 # 30 Days - Q&A Python Basic
-# Day 11 : 31-05-2020
+# Day 11 : 1-06-2020
 # Day 11 | IG : https://www.instagram.com/benjivrik/
 # Subject : File Handling
 #----------------------------------------------------
