@@ -6,113 +6,126 @@
 # 30 Days - Q&A Python Basic
 # Day 11 : 1-06-2020
 # Day 11 | IG : https://www.instagram.com/benjivrik/
-# Subject : File Handling
+# Subject : Challenge V - Rock Paper Scissor
 #----------------------------------------------------
 # what would be the output of this program ?
 
 '''
 
-    Basic User-file Interaction.
+    Rock Paper Scissor 
 
-    * Let's first open a file, append this text inside
-    
-    "
-        Hello, I am a test.
-        Append a text at the end of the file.
-    "
+    Play Rock Paper Scissor with your computer
 
-    * Close the file
+    Plays
 
-    * Print the content of the file
-
-    * Close the file
-
-    * Append this text inside your file.
-
-    "
-
-        Added!
-
-    "
-
-    * When this is done,
-
-    * Open the same file again, read the content,and print it.
-
-
-
-    > I am adding the file in the folder 'text_data', and my
-    text file name is day_11_data
-
-    * Use the function open(filename,mode)
-
-    * The  mode 'w' will create the file
-      if it does not exists and allows you
-      to write inside the element but will clear
-      the existing content.
-
-    * The mode 'a' will append the text you are trying to
-      add after the existing content.
-
-    * Use 'r' for reading the content of your file
+    Player 1      Player 2       Winner
+     Rock         Scissor       Player 1
+     Rock          Rock         Equality
+     Rock          Paper        Player 2
+     Paper        Scissor       Player 2
+     Paper         Rock         Player 1
+     Paper         Paper        Equality
+     Scissor      Scissor       Equality
+     Scissor       Rock         Player 1
+     Scissor       Paper        Equality   
 
 '''
 
+import random
 
 
-import os  #module for using your Operating System functionalities
+#main program
+available_plays =  ['Rock', 'Paper', 'Scissors']
 
-if not os.path.exists('text_data'):
-    # if the folder does not exist create the folder 
-    os.makedirs('text_data')
+#initialize score
+user_score = 0
+computer_score = 0
+number_of_games = 0
 
-#open and write inside the file
-    
-your_file = open('text_data/day_11_data', 'w')
+stop = "no"
+while stop == "no":
 
-your_file.write("Hello, I am a test.\nAppend a text at the end of the file.")
+  print("\n------ Starting a new game of Rock Paper Scissors. ------\n")
+  #computer play
+  computer_play_index = random.randint(0, len(available_plays)-1)
+  computer_play =  available_plays[computer_play_index]
+  #request user play
+  user_play = input("Please choose between 'Rock', 'Paper' or 'Scissors':")
+  while not user_play in available_plays :
+    user_play = input("Please enter your choice, as written, between 'Rock', 'Paper' or 'Scissors':")
 
-your_file.close()
+  #number of games
+  number_of_games =  number_of_games + 1
 
-print("\n----------- READING ------------\n")
-#open and read the file
+  print('\n')
+  
+  if(computer_play == 'Rock') :
 
-your_file =  open('text_data/day_11_data', 'r')
+    if(user_play == 'Rock') :
+      print("I played : {}.\nAnd you played {}.".format(computer_play,user_play))
+      print("\n> We are equal here. Let's continue <\n")
 
-#print the content of your file
+    if(user_play == 'Paper') :
+      print("I played : {}.\nAnd you played {}.".format(computer_play,user_play))
+      print("\n> You win. <\n")
+      user_score = user_score + 1 #increment user_score
 
-print(your_file.read())
+    if(user_play == 'Scissors') :
+      print("I played : {}.\nAnd you played {}.".format(computer_play,user_play))
+      print("\n> I win. <\n")
+      computer_score = computer_score + 1
 
-your_file.close()
+  if (computer_play == 'Paper') :
 
-print("\n----------- ADDING TEXT ------------\n")
+    if(user_play == 'Paper') :
+      print("I played : {}.\nAnd you played {}.".format(computer_play,user_play))
+      print("\n> We are equal here. Let's continue <\n")
 
-#open and append the text inside the file
+    if(user_play == 'Scissors') :
+      print("I played : {}.\nAnd you played {}.".format(computer_play,user_play))
+      print("\n> You win. <\n")
+      user_score = user_score + 1 #increment user_score
 
-your_file = open('text_data/day_11_data', 'a')
+    if(user_play == 'Rock') :
+      print("I played : {}.\nAnd you played {}.".format(computer_play,user_play))
+      print("\n> I win. <\n")
+      computer_score = computer_score + 1
 
-your_file.write("\nAdded!")
+  if (computer_play == 'Scissors'):
 
-your_file.close()
+    if(user_play == 'Scissors') :
+      print("I played : {}.\nAnd you played {}.".format(computer_play,user_play))
+      print("\n> We are equal here. Let's continue <\n")
 
-print("\n----------- READING ------------\n")
+    if(user_play == 'Rock') :
+      print("I played : {}.\nAnd you played {}.".format(computer_play,user_play))
+      print("\n> You win. <\n")
+      user_score = user_score + 1 #increment user_score
 
-#open and read the file
+    if(user_play == 'Paper') :
+      print("I played : {}.\nAnd you played {}.".format(computer_play,user_play))
+      print("\n> I win. <\n")
+      computer_score = computer_score + 1
 
-your_file =  open('text_data/day_11_data', 'r')
+  #stats
+  print('\n --- Current Stats. ---')
+  print('> User score :{}'.format(user_score))
+  print('> Computer score : {}'.format(computer_score))
+  print('> Draws : {}'.format(number_of_games - (user_score+computer_score)))
 
-#print the content of your file
+  #ask the user if he wants to contine
+  stop = input("\nDo you wanna stop ? yes or no : ")
 
-print(your_file.read())
+  if(stop != "yes"):
+      stop = "no"
+  else :
 
-your_file.close()
+      print('\n--- Final Stats. ---')
+      print('> Number of games :{}'.format(number_of_games))
+      print('> User score :{}'.format(user_score))
+      print('> Computer score : {}'.format(computer_score))
+      print('> Draws : {}'.format(number_of_games - (user_score+computer_score)))
 
-print("\n----------- END OF PROGRAM ------------\n")
+      break #stop the loop 
 
-
-
-
-
-
-
-
+print("End of program.")
