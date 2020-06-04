@@ -131,6 +131,7 @@ plt.legend(['sin(angle)', 'cos(angle)'])
 plt.title("Cosine an Sine Plot")
 plt.ylabel("cos(angle) and sin(angle)")
 plt.xlabel("Angles (deg)")
+plt.grid()
 plt.show()
 
 
