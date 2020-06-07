@@ -80,4 +80,16 @@ for tag in parser.find_all('h4') :
     tag_id = tag_id + 1
 
 your_file.close() # close your file
+
+#open and read the file
+    
+your_file = open('text_data/day_17_data', 'r')
+
+print("\n----------- READING ------------\n")
+
+for line in your_file:
+    print(line)
+
+
+
 print("\nEnd of program")
