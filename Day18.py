@@ -70,9 +70,7 @@ for line in new_file :
 
     #if the first element is not a number you did not reach the ids part in your file
 
-    if not data[0].isdigit() :
-        next(new_file) # go to the next line
-    else:
+    if not data[0].isalpha() and data[0].isdigit() :
         # a number is even when rest of division by 2 is zero
         # odd when the rest of the division is not zero
         if ( int(data[0]) % 2 == 0 ) :
