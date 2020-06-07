@@ -70,26 +70,29 @@ class Teacher(Human):
     
 
 
-h = Human("Tim","Brown")
-print("Getting property must_eat for Human :",h.must_eat )
-s = Student("Student-1","Brown","11152","4")
-print("Getting property must_eat for Student :",s.must_eat )
-t = Teacher("Teacher-1","Brown","11152","IT")
-print("Getting property must_eat for Teacher :",t.must_eat )
+if __name__ == "__main__" :
+    h = Human("Tim","Brown")
+    print("Getting property must_eat for Human :",h.must_eat )
+    s = Student("Student-1","Brown","11152","4")
+    print("Getting property must_eat for Student :",s.must_eat )
+    t = Teacher("Teacher-1","Brown","11152","IT")
+    print("Getting property must_eat for Teacher :",t.must_eat )
 
-t.set_office(540)
-print("Getting the office_number from the teacher object :", t.office_number)
+    t.set_office(540)
+    print("Getting the office_number from the teacher object :", t.office_number)
 
-# The following line will throw an error ...
-# ... since the office_number does not exist in Human.
-# Since the must_eat is a property of the Parent Class Human ...
-# ... the children inherit the property must_eat
-# But the Parent do not have access to the Child properties
+    # The following line will throw an error ...
+    # ... since the office_number does not exist in Human.
+    # Since the must_eat is a property of the Parent Class Human ...
+    # ... the children inherit the property must_eat
+    # But the Parent do not have access to the Child properties
 
-try:
-    print("Getting the office_number from the human object :", h.office_number)
-except AttributeError :
-    print("Caused by the Error Attribute Error.  The Human class does not have the attribute office_number")
+    try:
+        print("Getting the office_number from the human object :", h.office_number)
+    except AttributeError :
+        print("Caused by the Error Attribute Error.  The Human class does not have the attribute office_number")
 
-print("End of program")
+    print("End of program")
+
+
 

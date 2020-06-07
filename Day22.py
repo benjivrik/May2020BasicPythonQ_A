@@ -81,16 +81,17 @@ class Calculator:
         return "Executed. End of display_all_result "
 
 
+if __name__ == "__main__":
+    # main program
+    calc = Calculator()
+    # randomly choosen calculation
+    print("Executing calculation for a = 5 and b = 6")
+    print("5 + 6 = {}".format(calc.add_operands(5,6)))
+    print("5 - 6 = {}".format(calc.subtract_operands(5,6)))
+    print("5 / 6 = {}".format(calc.divide_operands(5,6)))
+    print("5 * 6 = {}".format(calc.multiply_operands(5,6)))
 
-# main program
-calc = Calculator()
-# randomly choosen calculation
-print("Executing calculation for a = 5 and b = 6")
-print("5 + 6 = {}".format(calc.add_operands(5,6)))
-print("5 - 6 = {}".format(calc.subtract_operands(5,6)))
-print("5 / 6 = {}".format(calc.divide_operands(5,6)))
-print("5 * 6 = {}".format(calc.multiply_operands(5,6)))
+    print("\nExecuting calculation for a = 5 and b = 6 using display_all_result")
+    print(calc.display_all_result(5,6))
+    print("\nEnd of Program")
 
-print("\nExecuting calculation for a = 5 and b = 6 using display_all_result")
-print(calc.display_all_result(5,6))
-print("\nEnd of Program")
