@@ -6,7 +6,7 @@
 # 30 Days - Q&A Python Basic
 # Day 20 : 13-06-2020
 # Day 20 | IG : https://www.instagram.com/benjivrik/
-# Subject : Challenge X - Create a mini-stopre using OOP
+# Subject : Challenge X - Create a mini-stope using OOP
 #----------------------------------------------------
 # what would be the output of this program ?
 

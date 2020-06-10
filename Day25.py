@@ -26,9 +26,9 @@
 
 '''
 
-
 class Customer:
 
+    # initialize
     def __init__(self, name, budget):
         self.__name = name 
         self.__budget = budget
