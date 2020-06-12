@@ -85,7 +85,7 @@ if __name__ == "__main__" :
     # ... since the office_number does not exist in Human.
     # Since the must_eat is a property of the Parent Class Human ...
     # ... the children inherit the property must_eat
-    # But the Parent do not have access to the Child properties
+    # But the Parent does not have access to the Child properties
 
     try:
         print("Getting the office_number from the human object :", h.office_number)

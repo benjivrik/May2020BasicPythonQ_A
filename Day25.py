@@ -53,6 +53,8 @@ class Customer:
         if (sum > self.__budget):
             print("\nYou do not have enough money to pay this bill.")
             print("Your budget is ${}.\n".format(self.__budget))
+        else:
+            print("You are good to go. Your bugdet is ${}.\n".format(self.__budget))
         
         return "Your current bill is ${}.".format(sum)
     
