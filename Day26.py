@@ -4,8 +4,8 @@
 # Community website : www.stuntbusiness.com
 #
 # 30 Days - Q&A Python Basic
-# Day 20 : 16-06-2020
-# Day 20 | IG : https://www.instagram.com/benjivrik/
+# Day 26 : 16-06-2020
+# Day 26 | IG : https://www.instagram.com/benjivrik/
 # Subject : Challenge XIII Create a class Product using OOP
 #----------------------------------------------------
 # what would be the output of this program ?
