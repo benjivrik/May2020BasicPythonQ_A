@@ -4,25 +4,48 @@
 # Community website : www.stuntbusiness.com
 #
 # 30 Days - Q&A Python Basic
-# Day 28 : 18-06-2020
-# Day 28 | IG : https://www.instagram.com/benjivrik/
-# Subject : GUI - tkinter
+# Day 30 : 20-06-2020
+# Day 30 | IG : https://www.instagram.com/benjivrik/
+# Subject : Challenge XVI - Save data from entries in a text file using the File Manager
 #----------------------------------------------------
 # what would be the output of this program ?
 
+
 '''
 
-    Your app is not eternally stick to a terminal.
+    Use the file Manager from Day24 and 
+    write the data you read from the entries inside a text file.
 
-    Python allows you to create GUI ( Graphical User Interface ).
+    Add a field for the first name, the last name and a phone number.
 
-    The module tkinter can be used for that.
-
-    Let's create our first GUI with an image, text and entries and a submit button.
+    Take the code from the Day28 and add the File Manager.
     
 '''
 
 import tkinter as tk
+import Day24
+
+# initialize file manager
+file_manager =  Day24.FileManager('text_data','day_30_data.txt')
+print(file_manager)
+
+count = 0
+# get entries from the text
+def get_entries():
+
+    # variable count 
+    global count
+    count +=1
+
+    print("\n-------- ADDING TEXT --------\n")
+    file_manager.add_content_in_file("Count : {}\n\n--------\n".format(count))
+    # adding random data
+    file_manager.add_content_in_file("First Name : {}\n".format(entr_one_text.get()))
+    file_manager.add_content_in_file("Last Name : {}\n".format(entr_two_text.get()))
+    file_manager.add_content_in_file("Phone Number : {}\n\n------------\n".format(entr_third_text.get()))
+
+    print("\n-------- READING --------\n")
+    file_manager.display_all_data()
 
 # initialize your tkinter object
 window = tk.Tk()
@@ -50,10 +73,8 @@ canvas_right.pack(side=tk.RIGHT ,fill=tk.BOTH, expand='yes',padx=5,pady=5)
 
 # text canvas
 text = '''
-Lorem ipsum dolor sit amet, 
-consectetur adipiscing elit. 
-Curabitur venenatis purus vel\n
-lectus sollicitudin bibendum. 
+Write data from entries\n
+inside a text file.
 '''
 canvas_right.create_text(200,150,fill="black", font="Times 15 bold",
                         text=text, anchor=tk.CENTER)
@@ -98,8 +119,10 @@ entry_three_label.pack()
 entry_three = tk.Entry(canvas_frame_bottom, textvariable=entr_third_text, width =400)
 entry_three.pack()
 
-submit = tk.Button(canvas_frame_bottom, text="Submit",fg="white",bg="purple",width=200,height=15,relief=tk.GROOVE)
+submit = tk.Button(canvas_frame_bottom, text="Submit",fg="white",bg="purple",width=200,height=15,relief=tk.GROOVE, command=get_entries)
 submit.pack(pady=2)
 
 # window
 window.mainloop()
+
+
