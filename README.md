@@ -44,21 +44,21 @@ Day 20: Object Oriented Programming
 
 Day 21: Inheritance
 
-Day 22: basic calculator using OOP
+Day 22: Challenge 9 | basic calculator using OOP
 
-Day 23: mini store using OOP
+Day 23: Challenge 10 | mini store using OOP
 
-Day 24: File manager using OOP
+Day 24: Challenge 11 | File manager using OOP
 
-Day 25: Create customer using OOP
+Day 25: Challenge 12 | Create customer using OOP
 
-Day 26: Create a product with all the property and prices; Assign the product to a name and price
+Day 26: Challenge 13 | Create a product with all the property and prices; Assign the product to a name and price
 
-Day 27: Create 5 products object and create two customers. Assign the bugdet and let them know if they have enough money to buy them
+Day 27: Challenge 14 | Create 5 products object and create two customers. Assign the bugdet and let them know if they have enough money to buy them
 
 Day 28: tkinter simple windows with button
 
-Day 29: tkinter counter
+Day 29: Challenge 15 | tkinter counter
 
-Day 30 : tkinter get fields values and write them inside a text file.
+Day 30 : Challenge 16 | tkinter get fields values and write them inside a text file.
 
