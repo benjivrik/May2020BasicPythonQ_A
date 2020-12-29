@@ -74,9 +74,9 @@ class Calculator:
             Display all the result
         '''
         addition = "{} + {} = {}\n".format(a,b,self.add_operands(a,b))
-        subtraction = "{} + {} = {}\n".format(a,b,self.subtract_operands(a,b))
-        division = "{} + {} = {}\n".format(a,b,self.divide_operands(a,b))
-        multiplication = "{} + {} = {}\n".format(a,b,self.multiply_operands(a,b))
+        subtraction = "{} - {} = {}\n".format(a,b,self.subtract_operands(a,b))
+        division = "{} / {} = {}\n".format(a,b,self.divide_operands(a,b))
+        multiplication = "{} * {} = {}\n".format(a,b,self.multiply_operands(a,b))
         print(addition + subtraction + division + multiplication)
         return "Executed. End of display_all_result "
 
