@@ -74,7 +74,7 @@ for angle in data:
     # cosine value
     cosine = math.cos(angle_rad)
     # write inside the file
-    your_file.write("\n{}\t\t{}\t\t{}".format(angle,sine,cosine))
+    your_file.write("\n{}\t\t{}\t\t{}".format(angle,cosine,sine))
 
 #close the file
 your_file.close()
@@ -93,21 +93,21 @@ for line in your_file :
     # split on the tabs
     
     data = line.strip('\n')
-    data = line.split('\t')
+    data = data.split('\t')
 
     # clear empty elements
     data = [word for word in data if word]
 
-    # This block is for clearing the new line character in the 'word'
-    # Suggest a better approach
-    for word in data:
-        if '\n' in word:
-            # find the index of the '\' character
-            remove_index = word.index('\n')
-            # find the index of the word with the new line character
-            word_index = data.index(word)
-            # replace the element with the new element
-            data[word_index] = word[0:remove_index]
+    # # This block is for clearing the new line character in the 'word'
+    # # Suggest a better approach
+    # for word in data:
+    #     if '\n' in word:
+    #         # find the index of the '\' character
+    #         remove_index = word.index('\n')
+    #         # find the index of the word with the new line character
+    #         word_index = data.index(word)
+    #         # replace the element with the new element
+    #         data[word_index] = word[0:remove_index]
         
 
     
