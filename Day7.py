@@ -101,7 +101,7 @@ while stop == 'no' :  #this is a loop with a condition
         print("a-b = ", substract_operands(a,b))
 
     if operator == "*":
-        print("a*b = ",multiply_operands(a,b))
+        print("a*b = ",multiply_operand(a,b))
 
     if operator == "/" :
         print("a/b = ", divide_operands(a,b))
