@@ -14,7 +14,7 @@
 
     Use the program from Day16. 
 
-    Look for all h4 in a specific and write them all in text file.
+    Look for all h5 in a specific and write them all in text file.
 
     Split them it two columns as shown below :
 
@@ -58,11 +58,11 @@ parser =  BeautifulSoup(content, 'html.parser')
 
 tag_id = 1 # for a convenient display,  the printing will have tags numbered
 #html tag
-tag_to_look_for = 'h4'
+tag_to_look_for = 'h5'
 
 #open and write inside the file
     
-your_file = open('text_data/day_17_data', 'w')
+your_file = open('text_data/day_17_data.txt', 'w')
 
 your_file.write("Tag parsed = {}".format(tag_to_look_for))
 
@@ -72,7 +72,7 @@ your_file.write("\nTags Id\t\tTags Contents")
 
 print("Printing all {} found in the requested url {} \n".format(tag_to_look_for, url) )
 #printing the tags
-for tag in parser.find_all('h4') :
+for tag in parser.find_all(tag_to_look_for) :
     
     your_file.write("\n{}\t\t{}".format(tag_id,tag))
     print( 'Tag {} : {}'.format(tag_id, tag))
@@ -83,7 +83,7 @@ your_file.close() # close your file
 
 #open and read the file
     
-your_file = open('text_data/day_17_data', 'r')
+your_file = open('text_data/day_17_data.txt', 'r')
 
 print("\n----------- READING ------------\n")
 
