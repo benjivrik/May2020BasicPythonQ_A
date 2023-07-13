@@ -28,7 +28,7 @@
 
     link : https://www.stuntbusiness.ca/fr/legal/terms-and-conditions
 
-    Let's get all the HTML h4 tags on this page and print them in the terminal.
+    Let's get all the HTML h5 tags on this page and print them in the terminal.
 
 '''
 
@@ -48,11 +48,12 @@ parser =  BeautifulSoup(content, 'html.parser')
 
 tag_id = 1 # for a convenient display,  the printing will have tags numbered
 #html tag
-tag_to_look_for = 'h4'
+tag_to_look_for = 'h5'
 
+print("")
 print("Printing all {} found in the requested url {} \n".format(tag_to_look_for, url) )
 #printing the tags
-for tag in parser.find_all('h4') :
+for tag in parser.find_all(tag_to_look_for) :
     print( 'Tag {} : {}'.format(tag_id, tag))
     tag_id = tag_id + 1
 
