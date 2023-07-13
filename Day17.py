@@ -62,7 +62,7 @@ tag_to_look_for = 'h5'
 
 #open and write inside the file
     
-your_file = open('text_data/day_17_data.txt', 'w')
+your_file = open('text_data/day_17_data', 'w')
 
 your_file.write("Tag parsed = {}".format(tag_to_look_for))
 
@@ -83,7 +83,7 @@ your_file.close() # close your file
 
 #open and read the file
     
-your_file = open('text_data/day_17_data.txt', 'r')
+your_file = open('text_data/day_17_data', 'r')
 
 print("\n----------- READING ------------\n")
 

@@ -1,14 +1,15 @@
-Tag parsed = h4
+Tag parsed = h5
 Tags Id		Tags Contents
-1		<h4 class="title-in-content">Services fournis</h4>
-2		<h4 class="title-in-content">Tarifs et modes de paiements</h4>
-3		<h4 class="title-in-content">Livraison</h4>
-4		<h4 class="title-in-content">Garanties</h4>
-5		<h4 class="title-in-content">Remboursements et plaintes</h4>
-6		<h4 class="title-in-content">Propriété intellectuelle</h4>
-7		<h4 class="title-in-content">Futures changements</h4>
-8		<h4 class="title-in-content">Lois applicables</h4>
-9		<h4 class="p-4"> Contactez-nous</h4>
-10		<h4 class="p-4"> À propos de nous<span class="glyphicon glyphicon-info-sign"></span> </h4>
-11		<h4 class="p-4"> Nos Services<span class="glyphicon glyphicon-wrench"></span></h4>
-12		<h4 class="text-center">Donnez-nous votre rétroaction!<span class="glyphicon glyphicon-comment"></span></h4>
+1		<h5 class="title-description">Restriction d'Ã¢ge</h5>
+2		<h5 class="title-description">Utilisation acceptable</h5>
+3		<h5 class="title-description">Comptes</h5>
+4		<h5 class="title-description">Services fournis</h5>
+5		<h5 class="title-description">Tarifs et modes de paiements</h5>
+6		<h5 class="title-description">Livraison</h5>
+7		<h5 class="title-description">Garanties</h5>
+8		<h5 class="title-description">Remboursements et plaintes</h5>
+9		<h5 class="title-description">Liens vers d'autres sites Web</h5>
+10		<h5 class="title-description">Limitation de responsabilitÃ©</h5>
+11		<h5 class="title-description">PropriÃ©tÃ© intellectuelle</h5>
+12		<h5 class="title-description">Futures changements</h5>
+13		<h5 class="title-description">Lois applicables</h5>

@@ -98,19 +98,6 @@ for line in your_file :
     # clear empty elements
     data = [word for word in data if word]
 
-    # # This block is for clearing the new line character in the 'word'
-    # # Suggest a better approach
-    # for word in data:
-    #     if '\n' in word:
-    #         # find the index of the '\' character
-    #         remove_index = word.index('\n')
-    #         # find the index of the word with the new line character
-    #         word_index = data.index(word)
-    #         # replace the element with the new element
-    #         data[word_index] = word[0:remove_index]
-        
-
-    
     # get the values
     # the only string should come from the first line
     if not data[0].isalpha() and data[0].isdigit():
@@ -128,7 +115,7 @@ your_file.close()
 
 plt.plot(angle_values, sine_values,angle_values, cosine_values)
 plt.legend(['sin(angle)', 'cos(angle)'])  
-plt.title("Cosine an Sine Plot")
+plt.title("Cosine and Sine Plot")
 plt.ylabel("cos(angle) and sin(angle)")
 plt.xlabel("Angles (deg)")
 plt.grid()
