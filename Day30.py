@@ -53,19 +53,26 @@ window.resizable(False,False)
 window.geometry("600x480")
 window.title("First GUI.")
 
-# create frame
+# create frame (top)
 frame = tk.Frame(window, width=600, height=300, background="white")
 frame.pack(side=tk.TOP)
 
 # create frame bottom
 frame_bottom = tk.Frame(window, width=600, height=100, background="white")
-frame_bottom.pack(side= tk.TOP)
+frame_bottom.pack(side= tk.BOTTOM)
 
+
+# -----------------------
+# TOP FRAME ELEMENTS
+# -----------------------
+
+# image container
 canvas = tk.Canvas(frame, width=200,height=300, bg="white",bd=1, highlightthickness=0,relief="solid")
 canvas.pack(side=tk.LEFT,fill='both', expand='yes',padx=5,pady=5)
 
 img = tk.PhotoImage(file="img_data/android-chrome-192x192.png")
 canvas.create_image(100, 150, anchor=tk.CENTER, image=img)
+
 #right canvas
 canvas_right = tk.Canvas(frame, width=400,height=300, bd=1, highlightthickness=0,relief="solid")
 canvas_right.pack(side=tk.RIGHT ,fill=tk.BOTH, expand='yes',padx=5,pady=5)
@@ -79,13 +86,13 @@ inside a text file.
 canvas_right.create_text(200,150,fill="black", font="Times 15 bold",
                         text=text, anchor=tk.CENTER)
 
-#bottom canvas
-canvas_right = tk.Canvas(window, width=600, height=300, bd=1, highlightthickness=0,relief="solid")
-canvas_right.pack(side=tk.BOTTOM ,fill='both', expand='yes')
 
+
+# -----------------------
+# BOTTOM FRAME ELEMENTS
+# -----------------------
 
 # add entries in the bottom frame
-
 canvas_frame_bottom = tk.Canvas(frame_bottom, width=600, height=100, bd=1, highlightthickness=0,relief="solid")
 canvas_frame_bottom.pack(fill='both',expand='yes',padx=5,pady=2)
 
